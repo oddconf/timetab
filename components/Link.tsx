@@ -1,21 +1,24 @@
 import Link from 'next/link';
 
 interface LinkProps {
-  href?: string,
-  to?: string,
-  styling?: boolean,
-  children?: any
+  href?: string;
+  to?: string;
+  styling?: boolean;
+  children?: any;
 }
 
-const Page = ({ href, to, styling = true, children }: LinkProps): JSX.Element => {
+const Page = ({
+  href,
+  to,
+  styling = true,
+  children,
+}: LinkProps): JSX.Element => {
   const anchorClasses = styling ? 'link-std' : 'no-underline';
 
   if (to) {
     return (
       <Link href={to as string}>
-        <a className={anchorClasses}>
-          {children}
-        </a>
+        <a className={anchorClasses}>{children}</a>
       </Link>
     );
   } else {

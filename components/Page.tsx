@@ -3,15 +3,22 @@ import Head from './Head';
 import Header from './Header';
 
 interface PageProps {
-  title?: string,
-  desc?: string,
-  ogImage?: string,
-  header?: boolean,
-  footer?: boolean,
-  children?: any
+  title?: string;
+  desc?: string;
+  ogImage?: string;
+  header?: boolean;
+  footer?: boolean;
+  children?: any;
 }
 
-const Page = ({ title, desc, ogImage, header = true, footer = true, children }: PageProps): JSX.Element => {
+const Page = ({
+  title,
+  desc,
+  ogImage,
+  header = true,
+  footer = true,
+  children,
+}: PageProps): JSX.Element => {
   return (
     <>
       <Head
@@ -19,7 +26,7 @@ const Page = ({ title, desc, ogImage, header = true, footer = true, children }: 
         desc={desc}
         ogImage={ogImage}
       />
-      <div className='flex flex-col min-h-full'>
+      <div className="flex flex-col min-h-full">
         {header && <Header />}
         {children}
         {footer && <Footer />}
