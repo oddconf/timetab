@@ -33,4 +33,4 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - run: vercel -n 'agile' -c -t ${{ secrets.VERCEL_TOKEN }}
+      - run: vercel -n 'timetab' -c -t ${{ secrets.VERCEL_TOKEN }}
